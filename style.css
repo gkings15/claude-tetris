@@ -189,7 +189,7 @@ kbd {
   color: var(--accent);
 }
 
-#restart-btn {
+.pause-menu button {
   margin-top: 8px;
   background: var(--accent);
   color: var(--btn-text);
@@ -203,7 +203,7 @@ kbd {
   transition: background 0.15s;
 }
 
-#restart-btn:hover {
+.pause-menu button:hover {
   background: var(--accent-hover);
 }
 
@@ -224,4 +224,51 @@ kbd {
 
 #theme-toggle:hover {
   border-color: var(--accent);
+}
+
+.pause-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.pause-menu.game-over #resume-btn,
+.pause-menu.game-over #controls-btn,
+.pause-menu.game-over .controls-list {
+  display: none;
+}
+
+.pause-menu .hidden {
+  display: none;
+}
+
+.pause-menu button {
+  min-width: 160px;
+}
+
+.controls-list {
+  list-style: none;
+  font-size: 13px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 6px 0;
+}
+
+.level-select {
+  margin-top: 10px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.level-select select {
+  background: var(--board-bg);
+  color: var(--text);
+  border: 1px solid var(--board-border);
+  border-radius: 4px;
+  padding: 4px 8px;
 }
