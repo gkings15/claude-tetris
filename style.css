@@ -225,3 +225,28 @@ kbd {
 #theme-toggle:hover {
   border-color: var(--accent);
 }
+
+/* ---- Selector de skin ---- */
+#skin-select {
+  position: fixed;
+  top: 12px;
+  right: 150px;
+  background: var(--board-bg);
+  color: var(--text);
+  border: 1px solid var(--board-border);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#skin-select:hover {
+  border-color: var(--accent);
+}
+
+/* Neon: fondo negro bajo los bloques con brillo */
+:root[data-skin="neon"] #board,
+:root[data-skin="neon"] #next-canvas {
+  background: #000;
+}
